@@ -623,10 +623,38 @@
         </a>
     </footer>
     
+    <!-- Audio Player -->
+    <div id="audio-player" class="audio-player">
+        <audio id="background-audio" preload="metadata" loop>
+            <source src="assets/audio/background-audio.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        
+        <div class="audio-player-controls">
+            <button id="audio-play-btn" class="audio-control-btn" aria-label="Reproduzir áudio">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            
+            <div class="audio-volume-container">
+                <button id="audio-mute-btn" class="audio-control-btn" aria-label="Silenciar áudio">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    </svg>
+                </button>
+                
+                <input type="range" id="audio-volume" class="audio-volume-slider" min="0" max="100" value="50" aria-label="Controle de volume">
+            </div>
+        </div>
+    </div>
+    
     <script src="assets/js/header.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/gallery.js"></script>
     <script src="assets/js/testimonials.js"></script>
     <script src="assets/js/gtm-config.js"></script>
+    <script src="assets/js/audio-player.js"></script>
 </body>
 </html>
